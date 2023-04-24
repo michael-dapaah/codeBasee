@@ -1,0 +1,30 @@
+body{
+
+}
+
+div{
+    width: 200px;
+    height: 100px;
+
+}
+.one{
+    background-color: #4D96A9;
+}
+.two{
+    background-color: #855FB1;
+}
+.three{
+    background-color: #28283D;
+}
+.four{
+    background-color: #87879D;
+}
+.five{
+    background-color: #8FE3F9;
+}
+.six{
+    background-color: #D9B8FF;
+}
+.seven{
+    background-color: #fafafa;
+}
