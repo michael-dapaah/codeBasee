@@ -264,7 +264,9 @@ body{
     .main2{
         display: none;
     }
-    
+    #num3{
+        display: none;
+    }
     
 }
 
@@ -272,8 +274,10 @@ body{
     /* styles for screens up to 768px wide */
     /* e.g. adjust font size, spacing, layout */
     body{
+
         margin: 0;
-        margin-left: 20px;
+        margin-left: 0px;
+        justify-content: center;
         overflow-x: hidden;
     
     }
