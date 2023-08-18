@@ -1,3 +1,6 @@
+body{
+    overflow-x: hidden;
+}
 *{
     margin: 0;
     padding: 0;
@@ -5,62 +8,112 @@
     font-family: 'Jost', sans-serif;
     list-style: none;
     text-decoration: none;
+    font-family: 'Red Hat Display', sans-serif;
+    
 }
 .meet{
     margin-top: 5%;
-    margin-left: 47%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     margin-bottom: 3%;
 }
 .section {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+}
+.lefthero{
+    height: 100%;
 }
 #tablet-hero{
     display: none;
 }
-.section h2{
-    font-size: 64px;
-    line-height: 1;
-    margin-bottom: 40px;
-}
-.section p{
-    font-size: 18px;
-    font-weight: none;
-    color: grey;
-}
-.middlesection{
-    padding: 5%;
-    line-height: 1.5;
-    margin-bottom: 50px;
-    justify-content: space-between;
+.middlesection {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
     text-align: center;
 }
-.righthero{
-    padding-top: 5%;
+.middlesection h2{
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 3rem;
+    line-height: 1;
+    color: #28283D;
 }
+.middlesection p{
+    width: 100%;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    
+    color: grey;
+}
+
+.righthero{
+}
+
 .middlesection #btn{
-    padding-top: 40px;
+    margin-top: 1rem;
+    width: 100%;
+    padding: 1rem;
+    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 #btn1{
-    background-color: rgba(77, 150, 168);
+    background-color: #4D96A9;
     border: 1px solid rgba(77, 150, 168);
-    width: 193px;
-    height: 58px;
-    font-size: 16px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    border-radius: 2rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    color: white;
+    font-weight: bold;
+
 }
 #btn2{
-    background-color: rgba(133, 95, 177);
+    white-space: nowrap;    
+    background-color: #855FB1;
     border: 1px solid rgba(133, 95, 177);
-    width: 139px;
-    height: 58px;
-    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    padding: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-weight: bold;
+    border-radius: 2rem;
+    color: white;
+    
+
 }
 #btn3{
-    background-color: rgba(133, 95, 177);
-    border: 1px solid rgba(133, 95, 177);
-    width: 193px;
-    height: 58px;
-    font-size: 16px;
+    background-color: #855FB1;
+    border: 1px solid #855FB1;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    border-radius: 2rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    color: white;
+    font-weight: bold;
+    
+
 }
 #btncol{
     color: #D9B8FF;
@@ -69,340 +122,433 @@
     color: #8FE3F9;
 }
 .button{
-    border-radius: 29px;
-    color: white;
-    justify-content: center;
-    height: 40px;
-    font-weight: bold;
-}
-button:hover {
-    background-color: #999;
     cursor: pointer;
+}
+.button:hover {
+    background-color: #000000;
   }
+.button:active {
+    background-color: #000000;
+}
+.addlinecircle{
+    margin: 0;
+}
 .linecircle1{
     display: flex;
     flex-direction: column;
-    margin-left: 50%;
+    justify-content: center;
+    align-items: center;
     line-height: 0;
-    margin-bottom: 40px;
+    margin-bottom: 4rem;
 }
 #linecircle1{
-    position: relative;
-    z-index: 5 ;
-    margin-bottom: -20px;
+    position: absolute;
+    top: -7rem;
+}
 
-}
-.circle{
-    width: 38px;
-}
-.line::before {
-    content: "";
-    border-left: 1px solid grey;
-    height: 60px; 
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 19px;
-  }
 .fourimages{
     display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    margin-left: 11%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
-#row{
+.row{
     display: flex;
-    flex-basis: 50%;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: row;
+    margin: 7%;
     
 }
-#twow{
-    flex-basis: 100%;
+#image{
+    flex: 1;
+    min-width: calc(20% - 1rem);
+    width: 19rem;
+    height: 15rem;
+    border-radius: 0.6rem;
 
 }
 .fourimages img {
-    margin-left: 35px;
-    width: 200px;
-    height: 180px;
-    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.6rem;
 }
 .writings{
     margin-top: 5%;
-    margin-left: 0%;
-    margin-bottom: 5%;
-    text-align: center;
+    margin-bottom: 15%;
+    align-items: center; 
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
 }
 .writings h6{
-    width: 100%;
-    height: 26px;
-    font-size: 16px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 0.3rem;
+    font-size: 0.9rem;
     color: #4D96A9;
 }
 .writings h4{
-    margin-top: 15px;
-    font-size: 40px;
+    margin-top: 1rem;
+    font-size: 2.5rem;
     line-height: 1;
+    color: #28283D;
+    width: 33%;
+    align-items: center; 
+    justify-content: center;
+    display: flex;
+    text-align: center;
 }
 .writings p{
     margin-top: 40px;
     font-size: 18px;
     color: grey;
+    width: 38%;
+    align-items: center; 
+    justify-content: center;
+    display: flex;
+    text-align: center;
 }
+
 .footer {
     display: flex;
     width: 100%;
-    height: 39vh;
+    height: 65vh;
     position: relative;
+    align-items: center;
     justify-content: center;
-    border-radius: 5px;
-    background-color: rgba(77, 150, 169, 0.9);
-    background-image: url("desktop/image-footer.jpg");
-    object-fit: cover;
+    background-image:
+    linear-gradient(to bottom, #4d96a9db, #4d96a9db),
+    url("desktop/image-footer.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: 120rem;
-    background-blend-mode: overlay;
     color: white;
-    padding-top: 8%;
-    z-index: 2;
+}
+.footerinfo{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    gap: 2rem;
 }
 #experience{
-    font-size: 40px;
-    padding-right: 180px;
-    font-weight: bold;
+    font-size: 2.5rem;
+    font-weight: 700;
+    width: 40%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
 }
 #stay{
-    font-size: 18px;
-    padding-right: 180px;
+    font-size: 1.1rem;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.lastbutton{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 /* at media for desktop active */
-@media(max-width: 768px) {
-    *{
-        
+@media (max-width: 1024px){
+    .section {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 1rem;
+        gap: 1rem;
     }
-    .meet{
-        width: 119px;
-        height: 28px;
-        overflow-x: hidden;
+
+
+    
+    
+    .lefthero img{
+        width: 17rem;
+        height: 18rem;
+
     }
-    .section{
+    .righthero img{
+        width: 17rem;
+        height: 18rem;
+    }
+
+    .middlesection {
         display: flex;
         flex-direction: column;
-        overflow-x: hidden;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        text-align: center;
     }
-    #tablet-hero{
-        display: block;
-        width: 750px;
-        height: 309px;
-        overflow-x: hidden;
+    .middlesection h2{
+        font-size: 2rem;
+        font-weight: 900;
     }
-    .righthero{
-        display: none;
-    }
-    .lefthero{
-        display: none;
-    }
-    .middlesection{
-        display: block;
-        margin-top: 10%;
+    .writings h4{
+        font-size: 1.8rem;
 
-    }
-    .linecircle1{
-        width: 56px;
-        height: 140px;
-    }
-    .fourimages{
-        display: flex;
-        flex-wrap: wrap;
-        width: 80%;
-        height: 50%;
-        margin-left: 10%;
-
-    }
-    #row{
-        display: flex;
-        flex-basis: 40%;
-        
-    }
-    #twow{
-        flex-basis: 80%;
-    
-    }
-    .fourimages img{
-        margin-left: 45%;
-        border-radius: 20px;
-        width: 90%;
-        height: 156px;
-    }
-    .writings{
-        margin-left: 10%;
-        width: 573px;
-        height: 240px;
     }
     .writings p{
-        font-size: 16px;
-        white-space: nowrap;
+        font-size: 1rem;
     }
-    /* footer{
-        width: 100%;
-    } */
+    .fourimages .row{
+        margin: 7%;
+    }
     .footer{
-        display: flex;
-        flex-direction: column;
         width: 100%;
-        height: 340px;
-        padding-left: 25%;
         justify-content: center;
-        text-align: center;
+        items-align: center;
+
+    }
+    .footerinfo{
+        width: 100%;
+        margin: 6%;
+    }
+    .experience{
+        width: 100%;
+    }
+}
+/* Tablet Styles */
+@media (max-width: 768px){
+    body{
         overflow-x: hidden;
+    }
     
+    .meet{
+        margin-top: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 3%;
         
     }
-    #linecircle1{
-        margin-bottom: -8%;
-        width: 56px;
-        height: 140px;
-    }
-    #stay div{
-        width: 100%;
-        /* display: inline; */
-        white-space: nowrap;
-    }
-    #btn3{
-        margin-left: -35%;
-    }
-    
-}
-
-/* mobile view */
-@media only screen and (max-width: 368px) {
-    .meet img{
-        width: 60px;
-        height: 20px;
-        overflow-y: hidden;
-    }
-    .section{
-        display: flex;
-        flex-direction: column;
-    }
-    .section h2{
-        margin-top: 0%;
-        font-Size: 40px;
-    }
-    .section p{
-        font-Size: 16px;
-    }
-    #tablet-hero{
-        display: block;
-        width: 914px;
-        height: 153px;
+  
+    .section {
+        grid-template-columns: 1fr;
         overflow-x: hidden;
+    }
+  
+
+    .lefthero,
+    .righthero {
+      display: none;
+    }
+  
+    #tablet-hero {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
     }
     #tablet-hero img{
-        width: 414px;
-        height: 153px;
+        width: 100%;
+        height: 100%;
     }
-    .righthero{
-        display: none;
-    }
-    .lefthero{
-        display: none;
-    }
-    .middlesection{
-        display: block;
-        margin-top: 5%;
-
-    }
-    .linecircle1{
-        width: 56px;
-        height: 140px;
-    }
-    /* button {
+    
+    .middlesection {
+        gap: 0.5rem;
+        padding: 2rem;
+        width: 80%;
+        padding: 6%;
+        margin: 7%;
         text-align: center;
-        margin-left: 25%;
+    }
+  
+    .middlesection h2 {
+        font-size: 2.5rem;
+        margin-bottom: 6%;
+    }
+  
+    .middlesection p {
+        width: 70%;
+        font-size: 0.8rem;
+    }
+    .middlesection #btn{
+        /* margin-top: 0%; */
+    }
+    .fourimages .row {
         display: flex;
         flex-direction: column;
-        white-space: nowrap;
-    } */
-    #btn1{
-        font-size: 12px;
-        text-align: center;
         justify-content: center;
-        padding-left: 5%;
-        white-space: nowrap;
+        align-items: center;
+        flex-direction: row;
+        align-items: center;
+        padding: 0.8rem;
+        gap: 0.95rem;
     }
-    #btn2{
-        font-size: 12px;
-        text-align: center;
-        justify-content: center;
-        margin-left: 0%;
-        margin-top: 5%;
-        padding-left: 5%;
-        white-space: nowrap;
-    }
-    .fourimages{
-        display: flex;
-        width: 327px;
-        height: 310px;
-        margin-left: 2px;
-    } 
 
-    .fourimages img{
-        width: 151px;
-        height: 143px;
-        margin-left: 15px;
+    #image {
+        flex: 1;
+        min-width: calc(20% - 1rem);
+        width: 100%;
+        height: 8.5rem;
+        margin-bottom: 2rem;
     }
     .writings{
-        margin-left: 2%;
-        width: 327px;
-        height: 284px;
-    }
-    .writings p{
-        font-size: 12px;
-        white-space: nowrap;
-    }
-    /* footer{
         width: 100%;
-    } */
-    .footer{
         display: flex;
         flex-direction: column;
-        width: 100%;
-        height: 40%;
-        padding-top: 40%;
-    
-    
-        
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 0.8rem;
     }
-    #linecircle1{
-        margin-bottom: -18%;
-        width: 56px;
-        height: 140px;
+    .writings h6 {
+        font-size: 0.8rem;
+    }
+  
+    .writings h4 {
+        font-size: 1.8rem;
+        width: 60%;
+        text-align: center;
+    }
+  
+    .writings p {
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
+        width: 60%;
+        text-align: center;
+        margin: 4%;
+    }
+  
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 50px 0;
+        background-size: cover;
+    }
+  
+    .footerinfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        gap: 1.5rem;
+        align-items: center;
     }
     #experience{
-        text-align: center;
+        width: 70%;
+        font-size: 2rem;
+        align-items: center;
         justify-content: center;
-        margin-top: -120px;
-        margin-left: 2px;
-        font-size: 32px;
-        line-height: 1.1;
-    }
-    #stay {
-        width: 100%;
-        font-size: 16px;
-        /* display: inline; */
-        white-space: nowrap;
-        margin-left: -43px;
-        padding-top: 8%;
-        padding-left: 0%;
         text-align: center;
+
     }
-    #stay span:not(.ignore){
-        color: white;
+    #stay{
+        font-size: 0.7rem;
+        width: 50%;
+        align-items: center;
+        text-align: center;
     }
     #btn3{
-        margin-top: 8%;
-        margin-left: -45%;
-        margin-bottom: 10%;
+        font-size: 0.8rem;
+        width: 100%;
+        align-items: center;
+        text-align: center;
     }
-    
+  }
+
+
+/* mobile view */
+@media screen and (max-width: 420px) {
+    .middlesection p{
+        width: 100%;
+    }
+    .middlesection #btn{
+        width: 3.5rem;
+    }
+    #btn1{
+        width: 8rem;
+        font-size: 0.9rem;
+    }
+    #btn2{
+        width: 6rem;
+        font-size: 0.9rem;
+    }
+    .circle{
+        
+    }
+    .fourimages .row{
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #image {
+        flex: 1;
+        min-width: calc(50% - 1rem);
+        width: 100%;
+        height: 8.5rem;
+        margin-bottom: 2rem;
+    }
+    .writings{
+        margin-top: 0%;
+        margin-bottom: 45%;
+    }
+    .writings h6{
+        gap: 0.1rem;
+        font-size: 0.7rem;
+        font-weight: 700;
+    }
+    .writings h4{
+        font-size: 1.2rem;
+    }
+    .writings p{
+        margin: 4%;
+        font-size: 0.8rem;
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 50px 0;
+        background-size: cover;
+    }
+    .footerinfo {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+    }
+    #experience{
+        width: 80%;
+        font-size: 1.5rem;
+        align-items: center;
+        text-align: center;
+
+    }
+    #stay{
+        font-size: 0.7rem;
+        width: 65%;
+        align-items: center;
+        text-align: center;
+    }
+    #btn3{
+        font-size: 0.9rem;
+        width: 12rem;
+        align-items: center;
+        text-align: center;
+    }
 }
-
-
